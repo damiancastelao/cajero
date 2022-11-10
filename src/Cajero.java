@@ -1,54 +1,31 @@
-import java.util.Scanner;
-
 public class Cajero {
-
-    static Scanner entrada = new Scanner(System.in);
-
-    public static int pedirDinero(String mensaje){
-        int cantidad = 0;
-        System.out.println(mensaje);
-        cantidad = entrada.nextInt();
-        return cantidad;
+    public static void mostrarMenu() {
+        System.out.println("1 sacar dinero\n0 salir");
     }
 
-    public static int cantidadDeBilletes(int valor_billete, int cantidad){
-        int cantidad_billetes = 0;
-        if (cantidad >= valor_billete){
-            cantidad_billetes = cantidad / valor_billete;
-        }
-        return cantidad_billetes;
+    public static int introducirOpcion() {
+        // 1 sacar dinero
+        // 0 salir
+        return 1;
     }
 
-    public static int elegirValorBillete(int vuelta_bucle){
-        int valor_billete = 0;
-        switch(vuelta_bucle){
-            case 0:
-                valor_billete=500;
-                break;
-            case 1:
-                valor_billete=200;
-                break;
-            case 2:
-                valor_billete=100;
-                break;
-            case 3:
-                valor_billete=50;
-                break;
-            case 4:
-                valor_billete=20;
-                break;
-            case 5:
-                valor_billete=10;
-                break;
-            case 6:
-                valor_billete=5;
-                break;
-            default:
-                System.out.println("Error en la seleccion de billetes");
-                break;
-        }
-
-        return valor_billete;
+    public static void preguntarCantidad() {
+        System.out.println("Cantidad?");
     }
 
+    public static int introducirCantidad() {
+        return 250;
+    }
+
+    public static boolean esMultiploCinco(int cantidad) {
+        return true;
+    }
+
+    public static void contarBilletes(int cantidad) {
+        System.out.println("Contando");
+    }
+
+    public static void mostrarBilletes() {
+        System.out.println("Mostrando");
+    }
 }

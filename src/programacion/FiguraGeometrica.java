@@ -1,3 +1,7 @@
+package programacion;
+
+import programacion.CajeroOriginal;
+
 public class FiguraGeometrica {
 
     public static float areaCirculo(float radio){
@@ -17,10 +21,10 @@ public class FiguraGeometrica {
         float n1,n2;
         n1=0;
         n2=0;
-        eleccion_usuario=Cajero.pedirDinero("0- Circulo\n1- Rectangulo");
+        eleccion_usuario= CajeroOriginal.pedirDinero("0- Circulo\n1- Rectangulo");
         switch(eleccion_usuario){
             case 0:
-                    n1=(float)Cajero.pedirDinero("Introduce el radio");
+                    n1=(float) CajeroOriginal.pedirDinero("Introduce el radio");
                     float area=0;
                     System.out.println("El area del circulo es " +area);
                 break;
